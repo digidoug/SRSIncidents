@@ -97,28 +97,29 @@
                     <h1>Incident Reporting</h1>
                 </div>
             </div>
-            <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Student</span>
+            <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0" id="sname"><span class="input-label">Student</span>
                 <input type="text" placeholder="Student involved" name="sname">
             </label>
-            <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Location</span>
+            <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0" id="sloc"><span class="input-label">Location</span>
                 <input type="text" placeholder="Where did the incident occur" name="sloc">
             </label>
-            <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Time</span>
+            <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0" id="stime"><span class="input-label">Time</span>
                 <input type="text" placeholder="Time the incident occured" name="stime">
             </label>
             <label class="item item-input item-select widget uib_w_8 d-margins" data-uib="ionic/select" data-ver="0">
                 <div class="input-label">Incident Level</div>
-                <select name="sincident">
+                <select name="sincident" id="sincident">
                     <option>Minor</option>
                     <option>Moderate</option>
                     <option>Major</option>
                 </select>
             </label>
-            <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0">
+            <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0" id="snotes">
                 <textarea placeholder="Please describe the incident" rows="4" wrap="soft" name="snotes"></textarea>
             </label>
             <div class="button-bar widget uib_w_10 d-margins" data-uib="ionic/button_bar" data-ver="0">
-                <button class="button widget uib_w_11 button-balanced" data-uib="ionic/button" data-ver="0">Submit</button>
+
+                <button class="button widget uib_w_15 d-margins button-balanced" data-uib="ionic/button" data-ver="0">Submit</button>
                 <button class="button widget uib_w_12 button-assertive" data-uib="ionic/button" data-ver="0">Cancel</button>
             </div>
         </div>

@@ -1,3 +1,4 @@
+
 /*jshint browser:true */
 /*global $ */(function()
 {
@@ -5,6 +6,7 @@
  /*
    hook up event handlers 
  */
+
  function register_event_handlers()
  {
     
@@ -48,13 +50,19 @@
     $(document).on("click", ".uib_w_11", function(evt)
     {
         /* your code goes here */ 
-        var sname = document.getElementsByName("sname")[0].value;
-        var sloc = document.getElementsByName("sloc")[0].value;
-        var slevel = document.getElementsByName("slevel")[0].value;
-        var stime = document.getElementsByName("stime")[0].value;
-        var snote = document.getElementsByName("snote")[0].value;
-        activate_page("#displaydata"); 
+
         
+         return false;
+    });
+    
+        /* button  Submit */
+    $(document).on("click", ".uib_w_15", function(evt)
+    {
+        var sname;
+//var snotes;
+        sname=document.getElementById("sname");
+        //snotes=document.getElementsById("snotes");
+        activate_page("#displaydata"); 
          return false;
     });
     
