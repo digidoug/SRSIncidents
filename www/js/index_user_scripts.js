@@ -60,9 +60,11 @@
     {
         var sname;
 //var snotes;
-        sname=document.getElementById("sname");
+        sname=document.getElementsByName("sname");
         //snotes=document.getElementsById("snotes");
-        activate_page("#displaydata"); 
+        //var snamed=new FormData(sname);
+        alert("<body>"+sname.value+"</body>");
+        //activate_page("#displaydata"); 
          return false;
     });
     
