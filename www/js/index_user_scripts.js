@@ -58,15 +58,16 @@
         /* button  Submit */
     $(document).on("click", ".uib_w_15", function(evt)
     {
-        var sname;
+        
 //var snotes;
-        sname=document.getElementsByName("sname");
+        var sname=$("#nameID").val();
         //snotes=document.getElementsById("snotes");
         //var snamed=new FormData(sname);
-        alert("<body>"+sname.value+"</body>");
+        alert("<body>"+sname+"...</body>");
+        $("#locID").val(sname);
         //activate_page("#displaydata"); 
          return false;
-    });
+    }); 
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);

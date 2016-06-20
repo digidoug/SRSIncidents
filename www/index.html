@@ -97,30 +97,30 @@
                     <h1>Incident Reporting</h1>
                 </div>
             </div>
-            <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0" id="snameid"><span class="input-label">Student</span>
-                <input type="text" placeholder="Student involved">
+            <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Student</span>
+                <input type="text" placeholder="Student involved" name="sname" id="nameID">
             </label>
-            <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0" id="sloc"><span class="input-label">Location</span>
-                <input type="text" placeholder="Where did the incident occur" name="sloc">
+            <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0" ><span class="input-label">Location</span>
+                <input type="text" placeholder="Where did the incident occur" name="sloc" id="locID">
             </label>
-            <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0" id="stime"><span class="input-label">Time</span>
-                <input type="text" placeholder="Time the incident occured" name="stime">
+            <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0" ><span class="input-label">Time</span>
+                <input type="text" placeholder="Time the incident occured" name="stime" id="timeID">
             </label>
             <label class="item item-input item-select widget uib_w_8 d-margins" data-uib="ionic/select" data-ver="0">
                 <div class="input-label">Incident Level</div>
-                <select name="sincident" id="sincident">
+                <select name="sincident" id="incidentID">
                     <option>Minor</option>
                     <option>Moderate</option>
                     <option>Major</option>
                 </select>
             </label>
-            <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0" id="snotes">
-                <textarea placeholder="Please describe the incident" rows="4" wrap="soft" name="snotes"></textarea>
+            <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0" >
+                <textarea placeholder="Please describe the incident" rows="4" wrap="soft" name="snotes" id="notesID"></textarea>
             </label>
             <div class="button-bar widget uib_w_10 d-margins" data-uib="ionic/button_bar" data-ver="0">
 
-                <button class="button widget uib_w_15 d-margins button-balanced" data-uib="ionic/button" data-ver="0">Submit</button>
-                <button class="button widget uib_w_12 button-assertive" data-uib="ionic/button" data-ver="0">Cancel</button>
+                <button class="button widget uib_w_15 d-margins button-balanced" data-uib="ionic/button" data-ver="0" id="submit">Submit</button>
+                <button class="button widget uib_w_12 button-assertive" data-uib="ionic/button" data-ver="0" id="cancel">Cancel</button>
             </div>
         </div>
         <div class="upage vertical-col left hidden" id="displaydata">
