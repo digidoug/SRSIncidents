@@ -53,6 +53,7 @@
   * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
   * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
 -->
+       
         <script src="cordova.js" id="xdkJScordova_"></script>
 
         <script src="js/app.js"></script>
@@ -73,7 +74,7 @@
     </head>
 
     <body ng-app="myApp">
-
+<script src="http://debug-software.intel.com/target/target-script-min.js#Z0qKeHk_y3ITb3S87XqyEH8LVWvWscMv74_MxUQ1j0g"></script>
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
@@ -98,7 +99,7 @@
                 </div>
             </div>
             <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Student</span>
-                <input type="text" placeholder="Student involved" name="sname" id="nameID">
+                <input type="text" placeholder="Student involved (First.Last)" name="sname" id="nameID">
             </label>
             <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Location</span>
                 <input type="text" placeholder="Where did the incident occur" name="sloc" id="locID">
@@ -109,6 +110,7 @@
             <label class="item item-input item-select widget uib_w_8 d-margins" data-uib="ionic/select" data-ver="0">
                 <div class="input-label">Incident Level</div>
                 <select name="sincident" id="incidentID">
+                    <option>None</option>
                     <option>Minor</option>
                     <option>Moderate</option>
                     <option>Major</option>
@@ -116,6 +118,46 @@
             </label>
             <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0">
                 <textarea placeholder="Please describe the incident" rows="4" wrap="soft" name="snotes" id="notesID"></textarea>
+            </label>
+            <label class="item item-input item-select widget uib_w_17 d-margins" data-uib="ionic/select" data-ver="0">
+                <div class="input-label">Minor Infractions</div>
+                <select id="minID">
+                    <option>None</option>
+                    <option>Rough Play - Outside or in Hallways</option>
+                    <option>Misuse of Equipment</option>
+                    <option>Inappropriate Language</option>
+                    <option>Defiance/Disrespect/Non-Compliance</option>
+                    <option>Transition Disruption - Yelling, running or throwing items in hall</option>
+                    <option>Outside of designated area</option>
+                    <option>Throwing objects (no safety risk)</option>
+                </select>
+            </label>
+            <label class="item item-input item-select widget uib_w_18 d-margins" data-uib="ionic/select" data-ver="0">
+                <div class="input-label">Moderate Infractions</div>
+                <select id="modID">
+                    <option>None</option>
+                    <option>Skipping class</option>
+                    <option>Late to class</option>
+                    <option>Defiance/Disrespect including directed name calling</option>
+                    <option>Continuous work refusal</option>
+                    <option>Non-Compliance - not following instruction</option>
+                    <option>Use of inappropriate items (ie. flammable)</option>
+                    <option>Throwing object directed at others</option>
+                </select>
+            </label>
+            <label class="item item-input item-select widget uib_w_19 d-margins" data-uib="ionic/select" data-ver="0">
+                <div class="input-label">Major Infractions</div>
+                <select id="majID">
+                    <option>None</option>
+                    <option>High level disruptive or unsafe behavior</option>
+                    <option>Bullying/Harassment/Intimidation/Discrimination</option>
+                    <option>Physical aggression/Violence/Threatening Behaviour</option>
+                    <option>Possession of a weapon</option>
+                    <option>Possession/Use of alcohol</option>
+                    <option>Smoking/Vaping on school property</option>
+                    <option>Damage to property</option>
+                    <option>Theft/Forgery</option>
+                </select>
             </label>
             <div class="button-bar widget uib_w_10 d-margins" data-uib="ionic/button_bar" data-ver="0">
 
@@ -145,10 +187,20 @@
                     <p><strong>Incident Level: </strong>
                         <label id="incidentOUT"></label>
                     </p>
-                    <p>
-                    Output: <label id="runout"></label>
+                    <p><strong>Minor Detail: </strong>
+                        <label id="minOUT"></label>
                     </p>
-                
+                    <p><strong>Moderate Detail: </strong>
+                        <label id="modOUT"></label>
+                    </p>
+                    <p><strong>Major Detail: </strong>
+                        <label id="majOUT"></label>
+                    </p>
+                    <p>
+                        Output:
+                        <label id="runout"></label>
+                    </p>
+
                 </div>
             </div>
             <button class="button widget uib_w_16 d-margins button-balanced" data-uib="ionic/button" data-ver="0">Return</button>
