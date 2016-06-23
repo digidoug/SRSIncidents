@@ -100,10 +100,10 @@
             <label class="item item-input widget uib_w_5 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Student</span>
                 <input type="text" placeholder="Student involved" name="sname" id="nameID">
             </label>
-            <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0" ><span class="input-label">Location</span>
+            <label class="item item-input widget uib_w_6 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Location</span>
                 <input type="text" placeholder="Where did the incident occur" name="sloc" id="locID">
             </label>
-            <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0" ><span class="input-label">Time</span>
+            <label class="item item-input widget uib_w_7 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Time</span>
                 <input type="text" placeholder="Time the incident occured" name="stime" id="timeID">
             </label>
             <label class="item item-input item-select widget uib_w_8 d-margins" data-uib="ionic/select" data-ver="0">
@@ -114,7 +114,7 @@
                     <option>Major</option>
                 </select>
             </label>
-            <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0" >
+            <label class="item item-input widget uib_w_13 d-margins" data-uib="ionic/textarea" data-ver="0">
                 <textarea placeholder="Please describe the incident" rows="4" wrap="soft" name="snotes" id="notesID"></textarea>
             </label>
             <div class="button-bar widget uib_w_10 d-margins" data-uib="ionic/button_bar" data-ver="0">
@@ -128,11 +128,30 @@
                 <div class="widget-container left-receptacle"></div>
                 <div class="widget-container right-receptacle"></div>
                 <div class="text-container">
-                    <p>{{sname}}</p>
+                    <p>You have posted a new record for
+                        <label id="nameOUT"></label>.</p>
 
-                    <p>{{snotes}}</p>
+                    <p><strong>Time:&nbsp;</strong>
+                        <label id="timeOUT"></label>
+                    </p>
+
+                    <p><strong>Location:&nbsp;</strong>
+                        <label id="locOUT"></label>
+                    </p>
+
+                    <p><strong>Notes:&nbsp;</strong>
+                        <label id="noteOUT"></label>
+                    </p>
+                    <p><strong>Incident Level: </strong>
+                        <label id="incidentOUT"></label>
+                    </p>
+                    <p>
+                    Output: <label id="runout"></label>
+                    </p>
+                
                 </div>
             </div>
+            <button class="button widget uib_w_16 d-margins button-balanced" data-uib="ionic/button" data-ver="0">Return</button>
         </div>
     </body>
 
