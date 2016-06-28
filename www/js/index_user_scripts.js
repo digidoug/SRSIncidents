@@ -6,7 +6,7 @@
       hook up event handlers 
     */
     function createListItem(webUrl, listName, itemProperties, success, failure) {
-       document.getElementById("runout").innerHTML = "here";
+        document.getElementById("runout").innerHTML = "here";
         $.ajax({
             url: webUrl + "/_vti_bin/listdata.svc/" + listName,
             type: "POST",
@@ -66,7 +66,21 @@
 
             return false;
         });
+        /* Select Time */
+        $(document).on("click", ".timeclass", function (evt) {
+            /* your code goes here */
 
+
+
+            $('#timeID').mobiscroll().calendar({
+                theme: 'mobiscroll',
+                display: 'bottom',
+                controls: ['calendar', 'date', 'time']
+            });
+
+
+            return false;
+        });
         /* button  Submit */
         $(document).on("click", ".uib_w_15", function (evt) {
 
