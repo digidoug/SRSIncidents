@@ -72,10 +72,13 @@
 
 
 
-            $('#timeID').mobiscroll().calendar({
-                theme: 'mobiscroll',
+            $('#timeID').mobiscroll().datetime({
+                theme: 'android-holo',
                 display: 'bottom',
-                controls: ['calendar', 'date', 'time']
+                layout: 'liquid',
+                showOnFocus: true,
+                showOnTap: true,
+                circular: true
             });
 
 
